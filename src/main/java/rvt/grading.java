@@ -7,33 +7,33 @@ public class grading {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter points: ");
         int points = scanner.nextInt();
-        int grade = 0;
+        String grade = "";
 
         if(points < 0) {
-        System.out.println("Impossible");
-        
-        if (points <= 49) 
-            System.out.println("Failed"); 
-        
-        if (points <= 59) 
-            System.out.println("1");    
-        
-        if (points <= 69) 
-            System.out.println("2");
-        
-        if (points <= 79) 
-            System.out.println("3"); 
-        
-        if (points <= 89) 
-            System.out.println("4");
-        
-        if (points <= 99) 
-            System.out.println("5");
-        
-        if (points >= 100) 
-            System.out.println("Incedible!");
+        grade = "Impossible";
         }
-        System.out.println("Grade: "  );
+        else if (points <= 49) {
+            grade = "Failed";
+        }
+        else if (points <= 59) {
+            grade = "1";  
+        }
+        else if (points <= 69) {
+            grade = "2";
+        }
+        else if (points <= 79) {
+            grade = "3";
+        }
+        else if (points <= 89) {
+            grade = "4";
+        }
+        else if (points <= 99) {
+            grade = "5";
+        }
+        else if (points >= 100) {
+            grade = "Incredible!";
+        }
+        System.out.println("Grade: " + grade );
         scanner.close();
     }
 }
