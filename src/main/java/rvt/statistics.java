@@ -1,9 +1,9 @@
 package rvt;
 
-public class Statistics {
+public class statistics {
     private int count;
 
-    public Statistics() {
+    public statistics() {
         this.count = 0;
     }
 
@@ -16,7 +16,7 @@ public class Statistics {
     }
 
     public static void main(String[] args) {
-        Statistics s = new Statistics();
+        statistics s = new statistics();
         s.addNumber();
         s.addNumber();
         s.addNumber();
