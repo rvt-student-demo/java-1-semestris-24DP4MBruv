@@ -4,68 +4,96 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class JMarraylist {
+
+    public static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
         OnlyTheseNumbers();
         ListSize();
-        
-    }
-    
-    public static void OnlyTheseNumbers() {
+        OnTheList();
 
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<Integer> num_List = new ArrayList<Integer>();
+    
+        ArrayList<String> demo = new ArrayList<>();
+        demo.add("First");
+        demo.add("Second");
+        demo.add("Third");
+
+        System.out.println("Before removeLast: " + demo);
+        removeLast(demo);
+        System.out.println("After removeLast: " + demo);
+    }
+   
+    public static void OnlyTheseNumbers() {
+        ArrayList<Integer> num_List = new ArrayList<>();
 
         while (true) {
+            System.out.println("Ievadi skaitli: ");
+            int number = scanner.nextInt();
 
-        System.out.println("Ievadi skaitli: ");
-        int number = scanner.nextInt();
-        
-        if (number == -1) {
-            break;
-    }   
-        num_List.add(number);
-    }
+            if (number == -1) {
+                break;
+            }
+            num_List.add(number);
+        }
+
         System.out.println("Ievadi sakuma indeksu: ");
         int startindex = scanner.nextInt();
 
         System.out.println("Ievadi beigu indeksu: ");
         int endindex = scanner.nextInt();
 
-        System.out.println("nummuri noteikta radiusa ir: ");
-        for(int i = startindex; i <= endindex; i++) {
-        System.out.println(num_List.get(i));
+        System.out.println("Numuri noteikta radiusa ir:");
+        for (int i = startindex; i <= endindex; i++) {
+            System.out.println(num_List.get(i));
+        }
+
+        scanner.nextLine();
     }
-        scanner.close();
-}
+
     public static void ListSize() {
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<String> name_List = new ArrayList<String>();
-        int summ = 0;
+        ArrayList<String> name_List = new ArrayList<>();
 
         while (true) {
-            
-        System.out.println("Ievadiet vardus: ");
-        String names = scanner.nextLine();
-        
+            System.out.println("Ievadiet vardus: ");
+            String name = scanner.nextLine();
 
-        if (names.isEmpty()) {
-            break; 
+            if (name.isEmpty()) {
+                break;
+            }
+
+            name_List.add(name);
+            System.out.println("Kopigais ir: " + name_List.size());
         }
-        
-
-        name_List.add(names);
-
-        
-
-        System.out.println("Kopīgais ir: "+ summ);
-
-
     }
 
+    public static void OnTheList() {
+        ArrayList<String> list = new ArrayList<>();
 
+        while (true) {
+            System.out.println("Ievadi vardu sarakstam (tukss = stop): ");
+            String input = scanner.nextLine();
 
-        
+            if (input.isEmpty()) {
+                break;
+            }
+            list.add(input);
+        }
+
+        System.out.println("Search for:");
+        String search = scanner.nextLine();
+
+        if (list.contains(search)) {
+            System.out.println("Found");
+        } else {
+            System.out.println("Not found");
+        }
+    }
+
+    public static void removeLast(ArrayList<String> strings) {
+        if (strings == null || strings.isEmpty()) {
+            return;
+        }
+
+        strings.remove(strings.size() - 1);
     }
 }
-
-    
