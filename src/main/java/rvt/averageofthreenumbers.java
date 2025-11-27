@@ -1,7 +1,7 @@
 package rvt;
 import java.util.Scanner;
 
-public class average {
+public class averageofthreenumbers {
     public static void main(String[]args){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ievadi pirmo skaitli: ");
