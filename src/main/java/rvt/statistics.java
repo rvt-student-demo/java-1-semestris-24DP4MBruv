@@ -1,30 +1,33 @@
 package rvt;
 
-public class statistics {
+public class Statistics {
     private int count;
 
-public statistics() {
-    this.count = 0;
-}
-public void addNumber(int number) {
-    this.count++;
-}
-public int getCount() {
-    return this.count;
-}
-public static void main(String[] args) {
-    statistics s = new statistics();
+    public Statistics() {
+        this.count = 0;
+    }
 
-        s.addNumber(0);
-        s.addNumber(0);
-        s.addNumber(0);
-        s.addNumber(0);
-        s.addNumber(0);
-        s.addNumber(0);
-        s.addNumber(0);
-        s.addNumber(0);
+    public void addNumber() {
+        this.count++;
+    }
 
-    System.out.println("Count: " + s.getCount());    
-   }
+    public int getCount() {
+        return this.count;
+    }
+
+    public static void main(String[] args) {
+        Statistics s = new Statistics();
+        s.addNumber();
+        s.addNumber();
+        s.addNumber();
+        s.addNumber();
+        s.addNumber();
+        s.addNumber();
+        s.addNumber();
+        s.addNumber();
+        s.addNumber();
+
+        System.out.println("Count: " + s.getCount());
+    }
 }
 
