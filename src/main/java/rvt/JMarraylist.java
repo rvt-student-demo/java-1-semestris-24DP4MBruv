@@ -96,4 +96,13 @@ public class JMarraylist {
 
         strings.remove(strings.size() - 1);
     }
+    public static void removeLastTest() {
+        ArrayList<String> strings = new ArrayList<>();
+
+        strings.add("First");
+        strings.add("Second");
+        strings.add("Third");
+
+        System.out.println(strings);
+}
 }

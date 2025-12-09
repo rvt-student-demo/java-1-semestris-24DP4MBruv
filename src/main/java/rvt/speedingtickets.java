@@ -2,7 +2,7 @@ package rvt;
 
 import java.util.Scanner;
 
-public class speedingticket {
+public class speedingtickets {
     public static void main(String[] args) {
         // Your code goes here...
         Scanner scanner = new Scanner(System.in);

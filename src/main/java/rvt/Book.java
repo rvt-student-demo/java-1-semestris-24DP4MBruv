@@ -2,7 +2,7 @@ package rvt;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-      public static class Book {
+      public class Book {
         private String title;
         private int pages;
         private int year;
@@ -20,7 +20,8 @@ import java.util.Scanner;
         public String toString() {
             return this.title + ", " + this.pages + " pages, " + this.year;
         }
-    }
+
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -54,3 +55,4 @@ import java.util.Scanner;
             }
         }
     }
+}
